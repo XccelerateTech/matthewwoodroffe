@@ -1,0 +1,20 @@
+.redbox {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.bluebox {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    align-content: flex-end;
+}
+.greenbox {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+#container {
+    display: flex;
+    justify-content: space-between;
+}

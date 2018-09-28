@@ -1,0 +1,21 @@
+.redbox {
+    width: 100px;
+    height: 100px;
+    background: red;
+    float: left;
+}
+.bluebox {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    float: right;
+}
+.greenbox {
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin: auto;
+}
+#centerContainer {
+    clear: both;
+}
