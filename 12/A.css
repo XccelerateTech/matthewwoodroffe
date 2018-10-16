@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-color: black;
+    background-image: url(./assets/2.jpg);
+    font-family: 'Mali', cursive;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: 'Mali', cursive;
+    color: antiquewhite;
+    text-decoration: bold;
+}
+td {
+    width: 100px !important;
+    height: 100px !important;
+}
+table {
+    margin: 7% auto;
+}
+.vertLine {
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+}
+.horiLine {
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+} 
+.squareImage {
+    background-image: url(./assets/X.png) !important;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+.circleImage {
+    background-image: url(./assets/O.png);
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}

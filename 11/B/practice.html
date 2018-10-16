@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id='people'>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+
+
+            function getRandomPerson() {
+                $.ajax({
+                    url: "https://randomuser.me/api/",
+                    type: "GET",
+
+                }).done(function (data) {
+                let parsedPersonName = data.results[0]
+                $('#people').append(`${parsedPersonName.email},${parsedPersonName.name.first},${parsedPersonName.name.last}`);
+                }).fail(function (data) {
+                    console.log("This function will be run if the ajax if failed");
+                }).always(function (data) {
+                    console.log("This function runs no matter success or fail.");
+                });
+            }
+
+
+            getRandomPerson()  
+        })
+
+    </script>
+</body>
+
+</html>
