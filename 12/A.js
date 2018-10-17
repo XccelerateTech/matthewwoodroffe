@@ -1,6 +1,10 @@
 
     $(function () {
 
+        // ===============================
+        // iterators
+        // ===============================
+
         let iterator = 0;
 
         let modulusNum = 0;
@@ -8,34 +12,10 @@
         let player1 = 0;
 
         let player2 = 0;
-        
-        let player1TopLeft = 0;
-        let player2TopLeft = 0;
 
-        let player1TopCenter = 0;
-        let player2TopCenter = 0;
-
-        let player1TopRight = 0;
-        let player2TopRight = 0;
-
-        let player1CenterLeft = 0;
-        let player2CenterLeft = 0;
-
-        let player1CenterCenter = 0;
-        let player2CenterCenter = 0;
-
-        let player1CenterRight = 0;
-        let player2CenterRight = 0;
-
-        let player1BottomLeft = 0;
-        let player2BottomLeft = 0;
-
-        let player1BottomCenter = 0;
-        let player2BottomCenter = 0;
-
-        let player1BottomRight = 0;
-        let player2BottomRight = 0;
-
+        //===============================
+        // Functions to place images on click
+        // ===============================
 
         $( "#topLeft" ).click(function() {
             modulusNum = iterator % 2;
@@ -220,6 +200,41 @@
             console.log(`This is player2 ${player2}`);
         });
 
+        //===============================
+        // Variables used to find out who wins
+        // ===============================
+
+        let player1TopLeft = 0;
+        let player2TopLeft = 0;
+
+        let player1TopCenter = 0;
+        let player2TopCenter = 0;
+
+        let player1TopRight = 0;
+        let player2TopRight = 0;
+
+        let player1CenterLeft = 0;
+        let player2CenterLeft = 0;
+
+        let player1CenterCenter = 0;
+        let player2CenterCenter = 0;
+
+        let player1CenterRight = 0;
+        let player2CenterRight = 0;
+
+        let player1BottomLeft = 0;
+        let player2BottomLeft = 0;
+
+        let player1BottomCenter = 0;
+        let player2BottomCenter = 0;
+
+        let player1BottomRight = 0;
+        let player2BottomRight = 0;
+
+        //================================
+        // If/else statements testing all possible conditions to find out who wins
+        // ===============================
+
         $("#tickTackToeTable").click(function() {
             if((player1TopLeft == 1) && (player1TopCenter == 1) && (player1TopRight == 1)) {
                 alert(`Player 1 Wins!`);
@@ -256,5 +271,31 @@
             } else if (player1 == 5) {
                 alert(`No-body won :'(`);
             }
+        });
+
+        //================================
+        // reset button
+        // ===============================
+
+
+        $( "#resetButton" ).click(function() {
+            $( "#topLeft" ).removeClass("squareImage");
+            $( "#topLeft" ).removeClass("circleImage");
+            $( "#topMiddle" ).removeClass("squareImage");
+            $( "#topMiddle" ).removeClass("circleImage");
+            $( "#topRight" ).removeClass("squareImage");
+            $( "#topRight" ).removeClass("circleImage");
+            $( "#middleLeft" ).removeClass("squareImage");
+            $( "#middleLeft" ).removeClass("circleImage");
+            $( "#middleCenter" ).removeClass("squareImage");
+            $( "#middleCenter" ).removeClass("circleImage");
+            $( "#middleRight" ).removeClass("squareImage");
+            $( "#middleRight" ).removeClass("circleImage");
+            $( "#bottomLeft" ).removeClass("squareImage");
+            $( "#bottomLeft" ).removeClass("circleImage");
+            $( "#bottomCenter" ).removeClass("squareImage");
+            $( "#bottomCenter" ).removeClass("circleImage");
+            $( "#bottomRight" ).removeClass("squareImage");
+            $( "#bottomRight" ).removeClass("circleImage");
         });
     })
