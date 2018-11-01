@@ -1,0 +1,37 @@
+.canvas {
+    border:1px black dotted;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px
+}
+#canvas-draft {
+    background-color: transparent;
+}
+body{
+    overflow: hidden;
+}
+#canvas-container {
+    height: 720px;
+}  
+/* ul {
+    padding: 0;
+    margin: 0;
+} */
+/* #sideBarList {
+    list-style: none;
+    margin: 0;
+} */
+/* #sideBarContainer {
+    display: inline-block;
+}
+#sideBar {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+} */
