@@ -1,0 +1,25 @@
+<script type="text/javascript" src='notes.js'></script>
+<div>
+    <div>
+        <p>Add a note</p>
+        <form>
+            <div>
+                <textarea type="text" name="note"></textarea>
+            </div>
+            <div class="col col-sm-3">
+                <input type="submit" value="Add">
+            </div>
+            {{#each notes}}
+            <div class="note">
+                <span class="input"><textarea data-id="{{ @index }}">{{ this }}</textarea></span>
+
+                <button class="remove btn btn-xs" data-id="{{ @index }}"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+            </div>
+        </form>
+    </div>
+</div>
