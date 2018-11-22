@@ -24,7 +24,7 @@ class NoteService {
     addNote(note) {
         return new Promise((resolve, reject) => {
             (this.listNotePromise).then((data) => {
-                // console.log(data);
+                console.log(data);
                 data.push(note);
                 fs.writeFile(this.filename, JSON.stringify(data),(err)=> {
                     if(err) {

@@ -8,13 +8,6 @@ $(()=>{
         userInputVal = $('input[name="note"]').val();
         console.log(userInputVal);
 
-        // $.get( "/", function( data ) {
-        //     noteService.addNote(userInputVal).append();
-        //     alert( "Load was performed." );
-   
-        //   });
-
-
              var notesTemplate = Handlebars.compile(`
 {{#each notes}}
 <div class="note">
@@ -26,6 +19,6 @@ $(()=>{
 
 function reloadNotes(notes) {
     $('#notes').html(notesTemplate({notes: notes}));
-} 
-})
+    } 
+    })
 })

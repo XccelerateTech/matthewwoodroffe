@@ -9,8 +9,8 @@ module.exports = function(app) {
     app.get('/todo' , function(req, res) {
         res.render('todo', {todos: data}); //we just need the view name here
     }); 
-
-    app.post('/todo' , urlencodedParser, function(req, res) {
+    
+    app.post('/todo', urlencodedParser, function(req, res) {
         data.push(req.body); //need to access the body of what is received from AJAX.  I tried with just req but did not work.  I guess this is due to the format it is sent in.
         //sending data back to todoList.js
         console.log(data);
@@ -25,3 +25,5 @@ module.exports = function(app) {
     }); 
 
 };
+
+console.log(data);

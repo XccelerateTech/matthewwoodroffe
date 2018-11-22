@@ -19,9 +19,7 @@ let noteService = new NoteService('notes.json');
 
 app.get('/', function (req, res) {
     noteService.listNote().then(function(readNotes){
-        res.render('index',{
-        notes: readNotes
-        });
+        res.render('index',{notes: readNotes});
     });
 });
 

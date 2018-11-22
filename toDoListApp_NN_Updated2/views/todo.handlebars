@@ -1,0 +1,21 @@
+<div id = "todo-table">
+    <form id="form">
+        <input type="text" id="item" placeholder="Add new item..." required />
+        <button type="submit">Add Item</button>
+    </form>
+    <ul id="myList"> 
+
+    {{!-- The todos partial below is handlebars syntax, and is targeted in the 'todoController' file,
+    in the app.get function. The code that targets it is this: '{todos: data}',
+    which works by putting the target in curly braces. The first parts 'todos' targets the partial,
+    the second part 'data' tells it what to pass to the partial, in this case 'data' which is the array --}}
+        
+    {{#each todos}} <!-- #each is a handlebars function that iterates over each element of an array.
+    Because an object is being passed, to access the properties inside the object, 
+    dot notation is used on the 'this' object below -->
+        <li>{{ this.text }}</li>
+    {{/each}}
+
+    </ul> 
+
+</div>
